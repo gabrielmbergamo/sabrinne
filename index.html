@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dra. Sabrinne Calone - Links</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background:
+          radial-gradient(circle at 20% 80%, rgba(255, 248, 240, 0.4) 0%, transparent 50%),
+          radial-gradient(circle at 80% 20%, rgba(254, 250, 245, 0.3) 0%, transparent 50%),
+          linear-gradient(135deg, #fefefe 0%, #fff9fa 30%, #fff7f8 70%, #fefcfc 100%);
+        min-height: 100vh;
+        position: relative;
+      }
+
+      .marcellina-font {
+        font-family: 'MonteCarlo', cursive;
+      }
+
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+                /* Pontos delicados espalhados */
+          radial-gradient(circle at 20% 30%, rgba(165, 132, 93, 0.02) 1px, transparent 1px),
+          radial-gradient(circle at 80% 20%, rgba(196, 163, 115, 0.015) 0.5px, transparent 0.5px),
+          radial-gradient(circle at 60% 70%, rgba(165, 132, 93, 0.01) 1px, transparent 1px),
+          radial-gradient(circle at 30% 80%, rgba(196, 163, 115, 0.02) 0.5px, transparent 0.5px),
+          radial-gradient(circle at 90% 60%, rgba(165, 132, 93, 0.015) 0.5px, transparent 0.5px);
+        background-size:
+          200px 200px,
+          150px 150px,
+          180px 180px,
+          160px 160px,
+          140px 140px;
+        opacity: 0.6;
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+        opacity: 0.4;
+        background: transparent;
+      }
+
+      .hero-section {
+        position: relative;
+        border-radius: 24px;
+        overflow: hidden;
+        margin-bottom: 40px;
+        min-height: 520px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .carousel-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .carousel-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center 15%;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition:
+          opacity 1.5s ease-in-out,
+          transform 1.5s ease-in-out;
+        transform: scale(1.05);
+      }
+
+      .carousel-slide.active {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .carousel-slide:nth-child(1) {
+        background-image: url('https://www.gmbergamo.com.br/wp-content/uploads/2025/07/516194688_1380674306322134_1229014948681622165_n-1.jpg');
+      }
+
+      .carousel-slide:nth-child(2) {
+        background-image: url('https://www.gmbergamo.com.br/wp-content/uploads/2025/07/516314959_1359404491800430_1520909773463390044_n-1.jpg');
+      }
+
+      .carousel-slide:nth-child(3) {
+        background-image: url('https://www.gmbergamo.com.br/wp-content/uploads/2025/07/516769220_719398807641610_6308038333688765800_n.jpg');
+      }
+
+      .carousel-slide:nth-child(4) {
+        background-image: url('https://www.gmbergamo.com.br/wp-content/uploads/2025/07/515935237_894127126267645_4683769031657369533_n.jpg');
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0.2) 12%,
+          rgba(0, 0, 0, 0.05) 25%,
+          rgba(0, 0, 0, 0.1) 45%,
+          rgba(0, 0, 0, 0.3) 65%,
+          rgba(0, 0, 0, 0.9) 100%
+        );
+        border-radius: 24px;
+        z-index: 2;
+      }
+
+      .service-card {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(165, 132, 93, 0.12);
+        background: linear-gradient(135deg, #ffffff 0%, rgba(255, 247, 248, 0.3) 100%);
+        position: relative;
+        backdrop-filter: blur(10px);
+        overflow: hidden;
+        animation: cardPulse 4s ease-in-out infinite;
+      }
+
+      .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(165, 132, 93, 0.05), transparent);
+        transition: left 0.6s ease;
+        animation: shimmer 6s ease-in-out infinite;
+      }
+
+      .service-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, transparent 30%, rgba(165, 132, 93, 0.02) 50%, transparent 70%);
+        opacity: 0;
+        animation: breathe 5s ease-in-out infinite;
+      }
+
+      @keyframes cardPulse {
+        0%,
+        100% {
+          box-shadow: 0 4px 20px rgba(165, 132, 93, 0.08);
+          border-color: rgba(165, 132, 93, 0.12);
+        }
+        50% {
+          box-shadow: 0 6px 25px rgba(165, 132, 93, 0.12);
+          border-color: rgba(165, 132, 93, 0.18);
+        }
+      }
+
+      @keyframes shimmer {
+        0% {
+          left: -100%;
+        }
+        50% {
+          left: -100%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      @keyframes breathe {
+        0%,
+        100% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      .service-card-circle {
+        position: absolute;
+        border: 1px solid rgba(165, 132, 93, 0.18);
+        border-radius: 50%;
+        pointer-events: none;
+        opacity: 0.32;
+        transition: all 0.6s ease;
+        box-shadow: 0 0 8px rgba(165, 132, 93, 0.11);
+      }
+
+      /* Aplicar animações específicas por categoria */
+      .service-card[data-category='consulta'] .service-card-circle {
+        animation: consultaCircleFloat 10s ease-in-out infinite;
+      }
+
+      .service-card[data-category='programa'] .service-card-circle {
+        animation: programaCircleFloat 16s ease-in-out infinite;
+      }
+
+      .service-card[data-category='ebook'] .service-card-circle {
+        animation: ebookCircleFloat 20s ease-in-out infinite;
+      }
+
+      .service-card[data-category='contato'] .service-card-circle {
+        animation: contatoCircleFloat 13s ease-in-out infinite;
+      }
+
+      .service-card-circle::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        border: 1px solid rgba(196, 163, 115, 0.13);
+        border-radius: 50%;
+        animation: cardCircleRotate 20s linear infinite;
+        box-shadow: inset 0 0 6px rgba(196, 163, 115, 0.07);
+      }
+
+      /* Consulta - Círculos médios concentrados */
+      .service-card[data-category='consulta'] .service-card-circle:nth-child(1) {
+        width: 35px;
+        height: 35px;
+        top: -6px;
+        right: -6px;
+        animation-delay: 0s;
+        animation-duration: 10s;
+      }
+
+      .service-card[data-category='consulta'] .service-card-circle:nth-child(2) {
+        width: 28px;
+        height: 28px;
+        bottom: -4px;
+        left: -4px;
+        animation-delay: -3s;
+        animation-duration: 14s;
+      }
+
+      .service-card[data-category='consulta'] .service-card-circle:nth-child(3) {
+        width: 32px;
+        height: 32px;
+        top: 45%;
+        left: -8px;
+        transform: translateY(-50%);
+        animation-delay: -6s;
+        animation-duration: 12s;
+      }
+
+      /* Programas - Círculos maiores espaçados */
+      .service-card[data-category='programa'] .service-card-circle:nth-child(1) {
+        width: 45px;
+        height: 45px;
+        top: -10px;
+        right: -10px;
+        animation-delay: 0s;
+        animation-duration: 16s;
+      }
+
+      .service-card[data-category='programa'] .service-card-circle:nth-child(2) {
+        width: 22px;
+        height: 22px;
+        bottom: -6px;
+        left: -6px;
+        animation-delay: -5s;
+        animation-duration: 18s;
+      }
+
+      .service-card[data-category='programa'] .service-card-circle:nth-child(3) {
+        width: 38px;
+        height: 38px;
+        top: 60%;
+        left: -12px;
+        transform: translateY(-50%);
+        animation-delay: -10s;
+        animation-duration: 14s;
+      }
+
+      /* E-books - Círculos pequenos delicados */
+      .service-card[data-category='ebook'] .service-card-circle:nth-child(1) {
+        width: 30px;
+        height: 30px;
+        top: -5px;
+        right: -5px;
+        animation-delay: 0s;
+        animation-duration: 20s;
+      }
+
+      .service-card[data-category='ebook'] .service-card-circle:nth-child(2) {
+        width: 20px;
+        height: 20px;
+        bottom: -3px;
+        left: -3px;
+        animation-delay: -7s;
+        animation-duration: 22s;
+      }
+
+      .service-card[data-category='ebook'] .service-card-circle:nth-child(3) {
+        width: 24px;
+        height: 24px;
+        top: 40%;
+        left: -6px;
+        transform: translateY(-50%);
+        animation-delay: -14s;
+        animation-duration: 18s;
+      }
+
+      /* Contato - Círculos dinâmicos variados */
+      .service-card[data-category='contato'] .service-card-circle:nth-child(1) {
+        width: 42px;
+        height: 42px;
+        top: -8px;
+        right: -8px;
+        animation-delay: 0s;
+        animation-duration: 13s;
+      }
+
+      .service-card[data-category='contato'] .service-card-circle:nth-child(2) {
+        width: 26px;
+        height: 26px;
+        bottom: -5px;
+        left: -5px;
+        animation-delay: -4s;
+        animation-duration: 15s;
+      }
+
+      .service-card[data-category='contato'] .service-card-circle:nth-child(3) {
+        width: 34px;
+        height: 34px;
+        top: 55%;
+        left: -9px;
+        transform: translateY(-50%);
+        animation-delay: -8s;
+        animation-duration: 11s;
+      }
+
+      @keyframes cardCircleRotate {
+        0% {
+          transform: rotate(0deg) scale(1);
+          opacity: 0.2;
+        }
+        25% {
+          transform: rotate(90deg) scale(1.1);
+          opacity: 0.4;
+        }
+        50% {
+          transform: rotate(180deg) scale(0.9);
+          opacity: 0.1;
+        }
+        75% {
+          transform: rotate(270deg) scale(1.05);
+          opacity: 0.3;
+        }
+        100% {
+          transform: rotate(360deg) scale(1);
+          opacity: 0.2;
+        }
+      }
+
+      @keyframes cardCircleHover {
+        0% {
+          transform: scale(1) rotate(0deg);
+          opacity: 0.2;
+        }
+        100% {
+          transform: scale(1.3) rotate(180deg);
+          opacity: 0.6;
+        }
+      }
+
+      /* Consulta - Movimento suave e constante */
+      @keyframes consultaCircleFloat {
+        0%,
+        100% {
+          opacity: 0.28;
+          transform: scale(1) rotate(0deg);
+          box-shadow: 0 0 6px rgba(165, 132, 93, 0.08);
+        }
+        50% {
+          opacity: 0.46;
+          transform: scale(1.03) rotate(180deg);
+          box-shadow: 0 0 10px rgba(165, 132, 93, 0.13);
+        }
+      }
+
+      /* Programas - Movimento amplo e elegante */
+      @keyframes programaCircleFloat {
+        0%,
+        100% {
+          opacity: 0.21;
+          transform: scale(1) rotate(0deg);
+          box-shadow: 0 0 8px rgba(165, 132, 93, 0.11);
+        }
+        25% {
+          opacity: 0.49;
+          transform: scale(1.08) rotate(90deg);
+          box-shadow: 0 0 14px rgba(165, 132, 93, 0.15);
+        }
+        50% {
+          opacity: 0.28;
+          transform: scale(0.92) rotate(180deg);
+          box-shadow: 0 0 5px rgba(165, 132, 93, 0.07);
+        }
+        75% {
+          opacity: 0.42;
+          transform: scale(1.05) rotate(270deg);
+          box-shadow: 0 0 12px rgba(165, 132, 93, 0.14);
+        }
+      }
+
+      /* E-books - Movimento delicado e sutil */
+      @keyframes ebookCircleFloat {
+        0%,
+        100% {
+          opacity: 0.32;
+          transform: scale(1) rotate(0deg);
+          box-shadow: 0 0 4px rgba(165, 132, 93, 0.07);
+        }
+        33% {
+          opacity: 0.42;
+          transform: scale(1.02) rotate(120deg);
+          box-shadow: 0 0 8px rgba(165, 132, 93, 0.11);
+        }
+        66% {
+          opacity: 0.25;
+          transform: scale(0.98) rotate(240deg);
+          box-shadow: 0 0 6px rgba(165, 132, 93, 0.08);
+        }
+      }
+
+      /* Contato - Movimento dinâmico e vibrante */
+      @keyframes contatoCircleFloat {
+        0%,
+        100% {
+          opacity: 0.25;
+          transform: scale(1) rotate(0deg);
+          box-shadow: 0 0 10px rgba(165, 132, 93, 0.13);
+        }
+        20% {
+          opacity: 0.46;
+          transform: scale(1.06) rotate(72deg);
+          box-shadow: 0 0 15px rgba(165, 132, 93, 0.18);
+        }
+        40% {
+          opacity: 0.28;
+          transform: scale(0.94) rotate(144deg);
+          box-shadow: 0 0 6px rgba(165, 132, 93, 0.08);
+        }
+        60% {
+          opacity: 0.39;
+          transform: scale(1.04) rotate(216deg);
+          box-shadow: 0 0 12px rgba(165, 132, 93, 0.14);
+        }
+        80% {
+          opacity: 0.49;
+          transform: scale(1.01) rotate(288deg);
+          box-shadow: 0 0 8px rgba(165, 132, 93, 0.11);
+        }
+      }
+
+      .service-card:hover::before {
+        left: 100%;
+      }
+
+      .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(165, 132, 93, 0.18);
+        border-color: rgba(165, 132, 93, 0.25);
+      }
+
+      .service-card:hover .service-card-circle {
+        opacity: 0.56;
+        animation: cardCircleHover 0.8s ease-in-out;
+      }
+
+      /* Mobile optimizations - always show circles */
+      @media (max-width: 768px) {
+        .service-card-circle {
+          opacity: 0.35;
+          box-shadow: 0 0 6px rgba(165, 132, 93, 0.08);
+        }
+
+        .service-card:active .service-card-circle {
+          opacity: 0.56;
+          animation: cardCircleHover 0.6s ease-in-out;
+          box-shadow: 0 0 12px rgba(165, 132, 93, 0.18);
+        }
+      }
+
+      .service-card:active {
+        transform: translateY(-2px) scale(0.98);
+        box-shadow: 0 8px 25px rgba(165, 132, 93, 0.2);
+        transition: all 0.15s ease;
+      }
+
+      .service-primary {
+        background: #ffffff;
+        color: #374151;
+        border: 1px solid rgba(165, 132, 93, 0.15);
+        position: relative;
+        border-left: 4px solid #a5845d;
+        animation: primaryGlow 6s ease-in-out infinite;
+      }
+
+      .service-primary::before {
+        background: linear-gradient(90deg, transparent, rgba(165, 132, 93, 0.06), transparent);
+      }
+
+      .service-primary::after {
+        background: linear-gradient(45deg, transparent 30%, rgba(165, 132, 93, 0.03) 50%, transparent 70%);
+      }
+
+      @keyframes primaryGlow {
+        0%,
+        100% {
+          border-left-color: #a5845d;
+          box-shadow: 0 4px 20px rgba(165, 132, 93, 0.1);
+        }
+        50% {
+          border-left-color: #c4a373;
+          box-shadow: 0 6px 30px rgba(165, 132, 93, 0.15);
+        }
+      }
+
+      .service-primary:hover {
+        background: #ffffff;
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 15px 40px rgba(165, 132, 93, 0.2);
+        border-color: rgba(165, 132, 93, 0.25);
+        border-left-color: #8b6f47;
+      }
+
+      .service-primary:hover .service-card-circle {
+        opacity: 0.7;
+        border-color: rgba(165, 132, 93, 0.28);
+        box-shadow: 0 0 15px rgba(165, 132, 93, 0.21);
+      }
+
+      .service-primary:hover .service-card-circle::before {
+        border-color: rgba(196, 163, 115, 0.21);
+        box-shadow: inset 0 0 8px rgba(196, 163, 115, 0.11);
+      }
+
+      .service-primary:active {
+        transform: translateY(-2px) scale(0.99);
+        box-shadow: 0 10px 30px rgba(165, 132, 93, 0.25);
+        border-left-color: #8b6f47;
+        transition: all 0.15s ease;
+      }
+
+      .service-primary .service-title {
+        color: #374151;
+        font-weight: 600;
+      }
+
+      .service-primary .service-meta {
+        color: #6b7280;
+      }
+
+      .service-primary .bronze-accent {
+        color: #a5845d;
+        font-weight: 600;
+      }
+
+      .category-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(165, 132, 93, 0.2), transparent);
+        margin: 32px 0 24px 0;
+      }
+
+      .profile-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .profile-container::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        right: -20px;
+        bottom: -20px;
+        background: conic-gradient(from 0deg, rgba(165, 132, 93, 0.2), rgba(196, 163, 115, 0.1), rgba(255, 192, 203, 0.1), rgba(165, 132, 93, 0.2));
+        border-radius: 50%;
+        filter: blur(25px);
+        z-index: -1;
+        animation: pulse 5s ease-in-out infinite;
+      }
+
+      .profile-image {
+        box-shadow:
+          0 12px 40px rgba(165, 132, 93, 0.25),
+          0 0 0 1px rgba(255, 255, 255, 0.1);
+        border: 5px solid rgba(255, 255, 255, 0.95);
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        z-index: 1;
+      }
+
+      .profile-image:hover {
+        transform: scale(1.08) rotate(-2deg);
+        box-shadow:
+          0 20px 60px rgba(165, 132, 93, 0.4),
+          0 0 0 1px rgba(255, 255, 255, 0.2);
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.7;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+      }
+
+      @keyframes spin-slow {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .animate-spin-slow {
+        animation: spin-slow 20s linear infinite;
+      }
+
+      .section-title {
+        color: #a5845d;
+        font-weight: 600;
+        font-size: 0.85rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 8px;
+      }
+
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #a5845d, transparent);
+        border-radius: 1px;
+      }
+
+      .highlight-badge {
+        position: absolute;
+        top: -8px;
+        right: 12px;
+        background: linear-gradient(135deg, #a5845d, #c4a373);
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 4px 12px;
+        border-radius: 12px;
+        letter-spacing: 0.025em;
+        box-shadow: 0 4px 12px rgba(165, 132, 93, 0.3);
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          box-shadow: 0 4px 12px rgba(165, 132, 93, 0.3);
+        }
+        to {
+          box-shadow: 0 6px 20px rgba(165, 132, 93, 0.5);
+        }
+      }
+
+      .service-meta {
+        color: #9ca3af;
+        font-size: 0.8rem;
+        margin-top: 2px;
+        font-style: italic;
+        opacity: 0.8;
+      }
+
+      .service-icon {
+        width: 20px;
+        height: 20px;
+        margin: 0 auto 8px auto;
+        color: #a5845d;
+        opacity: 0.8;
+      }
+
+      .certification-badge {
+        background: linear-gradient(135deg, rgba(165, 132, 93, 0.1), rgba(196, 163, 115, 0.05));
+        border: 1px solid rgba(165, 132, 93, 0.2);
+        color: #a5845d;
+        font-size: 0.65rem;
+        font-weight: 500;
+        padding: 2px 6px;
+        border-radius: 8px;
+        display: inline-block;
+        margin: 1px;
+        backdrop-filter: blur(5px);
+      }
+
+      .filter-container {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+
+      .filter-btn {
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(165, 132, 93, 0.2);
+        color: #6b7280;
+        font-size: 0.75rem;
+        font-weight: 500;
+        padding: 6px 12px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+
+      .filter-btn.active {
+        background: linear-gradient(135deg, #a5845d, #c4a373);
+        color: white;
+        border-color: #a5845d;
+        box-shadow: 0 2px 8px rgba(165, 132, 93, 0.3);
+      }
+
+      .filter-btn:hover {
+        background: rgba(165, 132, 93, 0.1);
+        border-color: rgba(165, 132, 93, 0.3);
+      }
+
+      .service-card[data-type='online'] {
+        border-left-color: #10b981;
+      }
+
+      .service-card[data-type='presencial'] {
+        border-left-color: #3b82f6;
+      }
+
+      .service-card[data-type='ambos'] {
+        border-left-color: #a5845d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="max-w-sm mx-auto px-4 py-8">
+      <!-- Hero Section -->
+      <div class="hero-section text-center mb-16 relative">
+        <!-- Carousel Background -->
+        <div class="carousel-container">
+          <div class="carousel-slide active"></div>
+          <div class="carousel-slide"></div>
+          <div class="carousel-slide"></div>
+          <div class="carousel-slide"></div>
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <!-- Logo positioned at top -->
+        <div class="relative z-10 pt-4 pb-6 flex-shrink-0">
+          <div class="inline-block relative">
+            <div class="absolute inset-0 bg-white/60 rounded-xl blur-md transform scale-110"></div>
+            <div
+              class="relative bg-white/85 backdrop-blur-sm rounded-xl px-3 py-1 shadow-lg border border-white/40"
+              style="display: inline-block; min-width: 120px"
+            >
+              <img
+                src="img/logo.png"
+                alt="Dra. Sabrinne Calone"
+                class="h-24 w-auto mx-auto transition-all duration-500 hover:scale-105 object-contain"
+                style="max-width: 200px"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Spacer to push content to bottom -->
+        <div class="flex-grow"></div>
+
+        <!-- Content positioned at bottom -->
+        <div class="relative z-10 pb-6 px-4">
+          <h1 class="text-2xl font-bold mb-2 text-white drop-shadow-2xl">Dra. Sabrinne Calone</h1>
+
+          <div class="mb-4 relative">
+            <p class="text-base font-light mb-2 text-amber-200 drop-shadow-lg marcellina-font" style="font-size: 1.6rem; letter-spacing: 0.05em">
+              Nutricionista da Mulher real
+            </p>
+            <!-- Decorative dots -->
+            <div class="flex justify-center space-x-1 mb-3">
+              <div class="w-1 h-1 bg-amber-200 rounded-full opacity-80"></div>
+              <div class="w-2 h-1 bg-amber-300 rounded-full"></div>
+              <div class="w-1 h-1 bg-amber-200 rounded-full opacity-80"></div>
+            </div>
+          </div>
+
+          <!-- Specialties -->
+          <div class="relative inline-block mb-3">
+            <div class="bg-black/60 backdrop-blur-md border border-white/30 rounded-xl px-4 py-3 shadow-2xl">
+              <p class="text-xs font-medium leading-relaxed text-white text-center">
+                Especialista em <span class="font-semibold text-amber-300">SOP</span> • <span class="font-semibold text-amber-300">Fertilidade</span
+                ><br />
+                <span class="font-semibold text-amber-300">Menopausa</span> •
+                <span class="font-semibold text-amber-300">Hashimoto</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Consultas -->
+      <div class="mb-12">
+        <div class="section-title">Consultas</div>
+
+        <a href="https://wa.me/5565999325455" class="block mb-4">
+          <div class="service-card service-primary rounded-xl p-5 text-center" data-type="ambos" data-category="consulta">
+            <div class="service-card-circle"></div>
+            <div class="service-card-circle"></div>
+            <div class="service-card-circle"></div>
+            <i data-lucide="stethoscope" class="service-icon"></i>
+            <div class="font-semibold text-base mb-1 service-title">Consulta <span class="bronze-accent">Avulsa</span></div>
+            <div class="service-meta">(online e presencial)</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Programas -->
+      <div class="mb-12">
+        <div class="section-title">Programas de Acompanhamento</div>
+
+        <div class="space-y-3">
+          <a href="https://wa.me/5565999325455" class="block">
+            <div class="service-card service-primary rounded-xl p-5 text-center" data-type="ambos" data-category="programa">
+              <div class="service-card-circle"></div>
+              <div class="service-card-circle"></div>
+              <div class="service-card-circle"></div>
+              <i data-lucide="calendar-days" class="service-icon"></i>
+              <div class="font-semibold text-base mb-1 service-title">Programa Nutricional de <span class="bronze-accent">3 Meses</span></div>
+              <div class="service-meta">(online e presencial)</div>
+            </div>
+          </a>
+
+          <a href="https://wa.me/5565999325455#" class="block">
+            <div class="service-card service-primary rounded-xl p-5 text-center" data-type="ambos" data-category="programa">
+              <div class="service-card-circle"></div>
+              <div class="service-card-circle"></div>
+              <div class="service-card-circle"></div>
+              <i data-lucide="trending-up" class="service-icon"></i>
+              <div class="font-semibold text-base mb-1 service-title">Programa Nutricional de <span class="bronze-accent">6 Meses</span></div>
+              <div class="service-meta">(online e presencial)</div>
+            </div>
+          </a>
+
+          <a href="https://wa.me/5565999325455" class="block">
+            <div class="service-card service-primary rounded-xl p-5 text-center" data-type="online" data-category="programa">
+              <div class="service-card-circle"></div>
+              <div class="service-card-circle"></div>
+              <div class="service-card-circle"></div>
+              <i data-lucide="target" class="service-icon"></i>
+              <div class="font-semibold text-base mb-1 service-title">Programa Nutricional de <span class="bronze-accent">12 Meses</span></div>
+              <div class="service-meta">(somente online)</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- E-books -->
+      <div class="mb-12">
+        <div class="section-title">E-books</div>
+
+        <div class="space-y-3">
+          <a href="https://wa.me/5565999325455" class="block">
+            <div class="service-card service-primary rounded-xl p-5 text-center" data-type="online" data-category="ebook">
+              <div class="service-card-circle"></div>
+              <div class="service-card-circle"></div>
+              <div class="service-card-circle"></div>
+              <i data-lucide="book-open" class="service-icon"></i>
+              <div class="font-semibold text-base mb-1 service-title"><span class="bronze-accent">Detox</span> 7 Dias</div>
+              <div class="service-meta">(eliminar 2 kg - e-book)</div>
+            </div>
+          </a>
+
+          <a href="https://pay.kiwify.com.br/IKe7fXY" class="block">
+            <div class="service-card service-primary rounded-xl p-5 text-center" data-type="online" data-category="ebook">
+              <div class="service-card-circle"></div>
+              <div class="service-card-circle"></div>
+              <div class="service-card-circle"></div>
+              <i data-lucide="book-open" class="service-icon"></i>
+              <div class="font-semibold text-base mb-1 service-title">Reprogramando o <span class="bronze-accent">Metabolismo</span></div>
+              <div class="service-meta">(ebook)</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contato -->
+      <div class="mb-8">
+        <div class="section-title">Contato</div>
+
+        <div class="space-y-3">
+          <a href="https://wa.me/5565999325455" class="block">
+            <div class="service-card service-primary rounded-xl p-5 text-center" data-type="online" data-category="contato">
+              <div class="service-card-circle"></div>
+              <div class="service-card-circle"></div>
+              <div class="service-card-circle"></div>
+              <i data-lucide="instagram" class="service-icon"></i>
+              <div class="font-semibold text-base mb-1 service-title"><span class="bronze-accent">Instagram</span></div>
+              <div class="service-meta">(dicas diárias de nutrição)</div>
+            </div>
+          </a>
+
+          <a href="https://wa.me/5565999325455" class="block">
+            <div class="service-card service-primary rounded-xl p-5 text-center" data-type="online" data-category="contato">
+              <div class="service-card-circle"></div>
+              <div class="service-card-circle"></div>
+              <div class="service-card-circle"></div>
+              <i data-lucide="message-circle" class="service-icon"></i>
+              <div class="font-semibold text-base mb-1 service-title"><span class="bronze-accent">WhatsApp</span></div>
+              <div class="service-meta">(tire suas dúvidas)</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="text-center pt-8 mt-8 border-t" style="border-color: rgba(165, 132, 93, 0.15)">
+        <p class="text-xs opacity-60" style="color: #a5845d">© 2025 Dra. Sabrinne Calone</p>
+        <div class="mt-2 flex justify-center">
+          <div class="w-8 h-0.5 bg-gradient-to-r from-transparent via-amber-600 to-transparent opacity-30"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Carousel functionality
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.carousel-slide');
+      const totalSlides = slides.length;
+
+      function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % totalSlides;
+        slides[currentSlide].classList.add('active');
+      }
+
+      // Auto-advance carousel every 4 seconds
+      setInterval(nextSlide, 4000);
+
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      // Touch-friendly animations for mobile
+      document.querySelectorAll('.service-card').forEach((card, index) => {
+        // Stagger the initial animation
+        card.style.animationDelay = `${index * 0.1}s`;
+
+        // Touch events for mobile
+        card.addEventListener('touchstart', function (e) {
+          this.style.transform = 'translateY(-2px) scale(0.98)';
+          this.style.transition = 'all 0.15s ease';
+        });
+
+        card.addEventListener('touchend', function (e) {
+          setTimeout(() => {
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.transition = 'all 0.3s ease';
+          }, 100);
+        });
+
+        // Hover for desktop
+        card.addEventListener('mouseenter', function () {
+          if (!('ontouchstart' in window)) {
+            this.style.transform = 'translateY(-2px)';
+          }
+        });
+
+        card.addEventListener('mouseleave', function () {
+          if (!('ontouchstart' in window)) {
+            this.style.transform = 'translateY(0)';
+          }
+        });
+      });
+
+      // Enhanced loading animation
+      window.addEventListener('load', () => {
+        // Logo animation
+        const logo = document.querySelector('img[alt="Dra. Sabrinne Calone"]:first-of-type');
+        if (logo) {
+          logo.style.opacity = '0';
+          logo.style.transform = 'translateY(-20px) scale(0.9)';
+          setTimeout(() => {
+            logo.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            logo.style.opacity = '1';
+            logo.style.transform = 'translateY(0) scale(1)';
+          }, 200);
+        }
+
+        // Profile image animation
+        const profileImage = document.querySelector('.profile-image');
+        if (profileImage) {
+          profileImage.style.opacity = '0';
+          profileImage.style.transform = 'scale(0.8) rotate(-10deg)';
+          setTimeout(() => {
+            profileImage.style.transition = 'all 1s cubic-bezier(0.4, 0, 0.2, 1)';
+            profileImage.style.opacity = '1';
+            profileImage.style.transform = 'scale(1) rotate(0deg)';
+          }, 400);
+        }
+
+        // Name and description animation
+        const textElements = document.querySelectorAll('h1, .text-lg, .text-sm');
+        textElements.forEach((el, index) => {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(15px)';
+
+          setTimeout(
+            () => {
+              el.style.transition = 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)';
+              el.style.opacity = '1';
+              el.style.transform = 'translateY(0)';
+            },
+            600 + index * 150,
+          );
+        });
+
+        // Service cards animation
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach((card, index) => {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(20px)';
+
+          setTimeout(
+            () => {
+              card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            },
+            1000 + index * 80,
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
